@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Forage Solutions Kenya | Super Napier Pakchong 1 & Quality Grasses</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-green: #2E7D32;
+            --accent-green: #4CAF50;
+            --light-green: #C8E6C9;
+            --orange: #FF5722;
+            --gold: #FFC107;
+            --white: #FFFFFF;
+            --dark: #1B5E20;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            --surface: #F8F9FA;
+            --gradient: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            --shadow: 0 4px 20px rgba(46, 125, 50, 0.15);
+        }
+        
+        body {
+            font-family: 'Poppins', 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+        
+        /* Modern Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            background: var(--gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: var(--gradient);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section with Background Images */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.8) 0%, rgba(76, 175, 80, 0.7) 100%),
+                        url('assets/images/pakchong.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="800" cy="300" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="400" cy="600" r="4" fill="rgba(255,255,255,0.1)"/><circle cx="700" cy="700" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+        
+        .btn-primary {
+            background: var(--orange);
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 87, 34, 0.3);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .btn-primary:hover {
+            background: #E64A19;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 87, 34, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Modern Sections */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Kenya Flag Colors Accent */
+        .kenya-accent {
+            background: linear-gradient(90deg, #000000 0%, #FF0000 33%, #00FF00 66%, #FFFFFF 100%);
+            height: 4px;
+            width: 100px;
+            margin: 0 auto 2rem;
+            border-radius: 2px;
+        }
+        
+        /* Grass Cards with Images */
+        .grass-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .grass-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            height: 100%;
+        }
+        
+        .grass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(46, 125, 50, 0.2);
+        }
+        
+        .grass-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .grass-card:hover .grass-image {
+            transform: scale(1.1);
+        }
+        
+        .grass-content {
+            padding: 2rem;
+        }
+        
+        .grass-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .badge {
+            background: var(--gradient);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin: 0.6rem 0;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: left;
+        }
+        
+        .feature-list li::before {
+            content: '✓';
+            background: var(--accent-green);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80') center/cover;
+            opacity: 0.1;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-card {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #FFD700, #FFA000);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(46, 125, 50, 0.2);
+            border-color: var(--accent-green);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--orange);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin: 1rem 0;
+        }
+        
+        .price-currency {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--surface);
+            position: relative;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--surface);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            background: var(--light-green);
+            transform: translateY(-2px);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            background: #1DA851;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .call-btn {
+            background: #2196F3;
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+        }
+        
+        .call-btn:hover {
+            background: #1976D2;
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .grass-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav {
+                padding: 1rem;
+            }
+        }
+        
+        /* Kenya-specific styling */
+        .kenya-flag-gradient {
+            background: linear-gradient(90deg, #000000 25%, #FF0000 25% 50%, #00AA00 50% 75%, #FFFFFF 75%);
+            height: 5px;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        .success-stories {
+            background: var(--surface);
+            padding: 4rem 0;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin: 1rem 0;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-top: 1rem;
+        }
+        
+        /* Gallery Styles */
+        .gallery-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(46, 125, 50, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-card:hover .gallery-image {
+            transform: scale(1.05);
+        }
+        
+        /* Loading and Performance */
+        .loading-placeholder {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icon">🌾</span>
+                <span>Premium Forage Kenya</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#grasses">Our Grasses</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.facebook.com/brachariagrasskenya/" target="_blank" style="color: #1877F2;">📘 Facebook</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Transform Your Kenyan Farm</h1>
+            <p>Premium Super Napier Pakchong 1 & High-Quality Forage Grasses<br>Trusted by 5000+ Farmers Across Kenya</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Get Your Cuttings Today</a>
+                <a href="#grasses" class="btn-secondary">Explore Our Grasses</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="grasses">
+        <div class="container">
+            <div class="kenya-accent"></div>
+            <h2 class="section-title animate-on-scroll">Our Premium Forage Collection</h2>
+            <p class="section-subtitle animate-on-scroll">Scientifically proven varieties that transform Kenyan livestock farming</p>
+            
+            <div class="grass-grid">
+                <div class="grass-card animate-on-scroll">
+                    <img src="assets/images/pakchong.jpg" alt="Super Napier Pakchong 1" class="grass-image">
+                    <div class="grass-content">
+                        <div class="badge">👑 KING OF GRASSES</div>
+                        <h3>🌟 Super Napier Pakchong 1</h3>
+                        <p style="margin-bottom: 1rem; color: var(--text-light);">The revolutionary Thai hybrid that's transforming Kenyan dairy farming since 2018</p>
+                        
+                        <ul class="feature-list">
+                            <li><strong>16-18% Crude Protein</strong> (vs 5-8% ordinary Napier)</li>
+                            <li><strong>200 tons per acre annually</strong></li>
+                            <li>Supports <strong>13-15 dairy cows per acre</strong></li>
+                            <li>Drought tolerant & disease resistant</li>
+                            <li>Smooth, hairless leaves - easy handling</li>
+                            <li>Perfect for silage production (18% WSC)</li>
+                            <li>7-8 harvests per year</li>
+                        </ul>
+                        
+                        <div style="background: var(--light-green); padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <strong>🥛 Proven Results:</strong> Marie Kihanya from Kinoo doubled her milk production from 10 to 20 liters daily!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grass-card animate-on-scroll">
+                    <img src="assets/images/brachiaria-grass.jpg" alt="Brachiaria Grass" class="grass-image">
+                    <div class="grass-content">
+                        <div class="badge">🌍 CLIMATE SMART</div>
+                        <h3>💪 Brachiaria Grass</h3>
+                        <p style="margin-bottom: 1rem; color: var(--text-light);">ILRI-recommended wonder grass, perfect for Kenya's varying climate conditions</p>
+                        
+                        <ul class="feature-list">
+                            <li><strong>14-17% Crude Protein</strong> content</li>
+                            <li><strong>30+ tons dry matter per hectare</strong></li>
+                            <li>15-40% increase in milk production</li>
+                            <li>Excellent drought tolerance (3-6 months)</li>
+                            <li>Thrives in poor soils</li>
+                            <li>Varieties: Basilisk, MG-4, Piata, Xaraes</li>
+                            <li>Carbon sequestration benefits</li>
+                        </ul>
+                        
+                        <div style="background: var(--light-green); padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <strong>🏆 Research Backed:</strong> Over 4000 farmers across Kenya have adopted Brachiaria with remarkable results!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grass-card animate-on-scroll">
+                    <img src="assets/images/purple napier.png" alt="Purple Napier" class="grass-image">
+                    <div class="grass-content">
+                        <div class="badge">🔥 RELIABLE CHOICE</div>
+                        <h3>🟣 Purple Napier</h3>
+                        <p style="margin-bottom: 1rem; color: var(--text-light);">The trusted backbone of Kenyan dairy farming - proven over decades</p>
+                        
+                        <ul class="feature-list">
+                            <li><strong>7-10% Crude Protein</strong> content</li>
+                            <li>Fast growth & high biomass production</li>
+                            <li>Excellent for cut-and-carry systems</li>
+                            <li>Multiple varieties: French Cameroon, Bana</li>
+                            <li>Good for soil conservation & erosion control</li>
+                            <li>Suitable for intercropping with legumes</li>
+                            <li>Cost-effective establishment</li>
+                        </ul>
+                        
+                        <div style="background: var(--light-green); padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <strong>✅ Time-Tested:</strong> The foundation grass that built Kenya's dairy industry - reliable and affordable!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grass-card animate-on-scroll">
+                    <img src="assets/images/supervines.webp" alt="Super Vines K" class="grass-image">
+                    <div class="grass-content">
+                        <div class="badge">🌿 DUAL PURPOSE</div>
+                        <h3>🍠 Super Vines K</h3>
+                        <p style="margin-bottom: 1rem; color: var(--text-light);">Premium sweet potato vines - feed your livestock and harvest tubers</p>
+                        
+                        <ul class="feature-list">
+                            <li>High protein & vitamin content</li>
+                            <li>Rich in essential minerals</li>
+                            <li>Fast regeneration after cutting</li>
+                            <li>Excellent livestock palatability</li>
+                            <li>Dual harvest: vines & sweet potatoes</li>
+                            <li>Thrives in various soil conditions</li>
+                            <li>Natural ground cover benefits</li>
+                        </ul>
+                        
+                        <div style="background: var(--light-green); padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <strong>💡 Smart Choice:</strong> Get nutritious fodder AND harvest sweet potatoes for extra income!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Proven Results Across Kenya</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">200</span>
+                    <div class="stat-label">Tons per acre annually<br>(Super Napier Pakchong 1)</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">18%</span>
+                    <div class="stat-label">Maximum crude protein<br>content achieved</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15</span>
+                    <div class="stat-label">Dairy cows supported<br>per acre</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">40%</span>
+                    <div class="stat-label">Milk production<br>increase potential</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">5000+</span>
+                    <div class="stat-label">Kenyan farmers<br>already benefiting</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" style="background: white; padding: 6rem 0;">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">🌟 Proven Scientific Benefits</h2>
+            <div class="kenya-accent"></div>
+            <p class="section-subtitle animate-on-scroll">Research-backed advantages that transform your farming success</p>
+            
+            <div class="grass-grid" style="margin-top: 4rem;">
+                <div class="grass-card animate-on-scroll" style="border-left: 5px solid var(--primary-green);">
+                    <div class="grass-content">
+                        <h3 style="color: var(--primary-green); display: flex; align-items: center; gap: 0.5rem;">
+                            🥛 <span>Milk Production Revolution</span>
+                        </h3>
+                        <ul class="feature-list">
+                            <li><span style="font-weight: bold;">15-40% increase</span> in daily milk production with Brachiaria</li>
+                            <li><span style="font-weight: bold;">Double your output</span> from 10 to 20 liters daily (Super Napier)</li>
+                            <li><span style="font-weight: bold;">7-12 liters extra</span> daily reported by North Rift farmers</li>
+                            <li>Consistent production even during dry seasons</li>
+                            <li>Higher quality milk with better fat content</li>
+                        </ul>
+                        <div style="background: #E8F5E8; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <small><strong>🔬 ILRI Research:</strong> Over 4,000 farmers across 18 African countries have recorded significant milk increases</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grass-card animate-on-scroll" style="border-left: 5px solid var(--orange);">
+                    <div class="grass-content">
+                        <h3 style="color: var(--orange); display: flex; align-items: center; gap: 0.5rem;">
+                            🌾 <span>Superior Nutrition Profile</span>
+                        </h3>
+                        <ul class="feature-list">
+                            <li>Super Napier <span style="font-weight: bold;">16-18% crude protein</span> <span style="font-size: 0.85em;">(vs 5-8% ordinary Napier)</span></li>
+                            <li>Brachiaria <span style="font-weight: bold;">14-27% crude protein</span> content</li>
+                            <li><span style="font-weight: bold;">18% WSC</span> in Super Napier perfect for silage</li>
+                            <li>Higher digestibility and palatability</li>
+                            <li>Rich in essential minerals and vitamins</li>
+                        </ul>
+                        <div style="background: #FFF3E0; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <small><strong>⚡ Impact:</strong> Reduces need for expensive concentrates by 30-50%</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grass-card animate-on-scroll" style="border-left: 5px solid #2196F3;">
+                    <div class="grass-content">
+                        <h3 style="color: #2196F3; display: flex; align-items: center; gap: 0.5rem;">
+                            🏜️ <span>Climate-Smart Resilience</span>
+                        </h3>
+                        <ul class="feature-list">
+                            <li><span style="font-weight: bold;">3-6 months drought tolerance</span> <span style="font-size: 0.85em;">(Brachiaria)</span></li>
+                            <li>Thrives in Kenya's varying climate conditions</li>
+                            <li>Disease and pest resistant varieties</li>
+                            <li>Performs well in poor soils</li>
+                            <li>Carbon sequestration benefits</li>
+                        </ul>
+                        <div style="background: #E3F2FD; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <small><strong>🌍 Climate Impact:</strong> Perfect for Kenya's 83% arid and semi-arid lands</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grass-card animate-on-scroll" style="border-left: 5px solid #9C27B0;">
+                    <div class="grass-content">
+                        <h3 style="color: #9C27B0; display: flex; align-items: center; gap: 0.5rem;">
+                            📈 <span>Maximum Productivity</span>
+                        </h3>
+                        <ul class="feature-list">
+                            <li><span style="font-weight: bold;">200 tons per acre annually</span> <span style="font-size: 0.85em;">(Super Napier)</span></li>
+                            <li>Support <span style="font-weight: bold;">13-15 dairy cows per acre</span></li>
+                            <li><span style="font-weight: bold;">7-8 harvests per year</span></li>
+                            <li>First cut in <span style="font-weight: bold;">75-90 days</span>, then every <span style="font-weight: bold;">30-45 days</span></li>
+                            <li><span style="font-weight: bold;">30+ tons</span> dry matter per hectare <span style="font-size: 0.85em;">(Brachiaria)</span></li>
+                        </ul>
+                        <div style="background: #F3E5F5; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <small><strong>💰 ROI:</strong> Break-even in 6-8 months, then pure profit</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grass-card animate-on-scroll" style="border-left: 5px solid #FF5722;">
+                    <div class="grass-content">
+                        <h3 style="color: #FF5722; display: flex; align-items: center; gap: 0.5rem;">
+                            💰 <span>Economic Transformation</span>
+                        </h3>
+                        <ul class="feature-list">
+                            <li><span style="font-weight: bold;">60% reduction</span> in feed costs</li>
+                            <li>Eliminates need for expensive hay during dry season</li>
+                            <li>Higher milk prices due to consistent supply</li>
+                            <li>Reduces livestock mortality rates</li>
+                            <li>Multiple income streams (fresh feed, silage, seed sales)</li>
+                        </ul>
+                        <div style="background: #FBE9E7; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <small><strong>🎯 Kenya Focus:</strong> Addresses 60% annual animal feed shortage</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grass-card animate-on-scroll" style="border-left: 5px solid #4CAF50;">
+                    <div class="grass-content">
+                        <h3 style="color: #4CAF50; display: flex; align-items: center; gap: 0.5rem;">
+                            🌱 <span>Soil & Environmental Benefits</span>
+                        </h3>
+                        <ul class="feature-list">
+                            <li>Improves soil health and fertility</li>
+                            <li>Prevents soil erosion on slopes</li>
+                            <li>Nitrogen fixation capabilities</li>
+                            <li>Reduces greenhouse gas emissions per liter of milk</li>
+                            <li>Excellent for intercropping systems</li>
+                        </ul>
+                        <div style="background: #E8F5E8; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                            <small><strong>🌿 Sustainability:</strong> Regenerative farming that heals the land</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Validation Section -->
+            <div style="background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%); color: white; padding: 3rem; border-radius: 25px; margin-top: 4rem; text-align: center;" class="animate-on-scroll">
+                <h3 style="color: white; margin-bottom: 2rem;">🔬 Backed by Leading Research Institutions</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏛️</div>
+                        <strong>ILRI</strong><br>
+                        <small>International Livestock Research Institute</small>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔬</div>
+                        <strong>KALRO</strong><br>
+                        <small>Kenya Agricultural Research Organization</small>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌍</div>
+                        <strong>40,000+</strong><br>
+                        <small>Farming households across 18 African countries</small>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+                        <strong>98%</strong><br>
+                        <small>Success rate in field trials</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Success Stories from Kenyan Farmers</h2>
+            <div class="kenya-flag-gradient"></div>
+            
+            <div class="grass-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <p>"Since I started using Super Napier Pakchong 1 last year, my daily milk production has doubled from 10 to 20 liters. My cows are healthier and more productive than ever before."</p>
+                    <div class="testimonial-author">- Marie Kihanya, Kinoo, Central Kenya</div>
+                </div>
+                
+                <div class="testimonial-card animate-on-scroll">
+                    <p>"Brachiaria grass has been a game-changer for my farm in Nakuru. Even during the dry season, my cows have consistent, high-quality feed. My milk sales to New KCC have increased by 35%."</p>
+                    <div class="testimonial-author">- John Magut, Nakuru County</div>
+                </div>
+                
+                <div class="testimonial-card animate-on-scroll">
+                    <p>"The Super Napier from this company has a 98% success rate on my farm. No diseases, drought tolerant, and my heifers are gaining 800g-1kg per day when fed properly."</p>
+                    <div class="testimonial-author">- Peter Wanjala, Bungoma County</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cultivation" style="background: var(--surface);">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Complete Kenyan Growing Guide</h2>
+            <p class="section-subtitle animate-on-scroll">Tailored for Kenya's unique climate and soil conditions</p>
+            
+            <div class="grass-grid">
+                <div class="grass-card animate-on-scroll">
+                    <img src="assets/images/plantinng super napier.jpg" alt="Land preparation in Kenya" class="grass-image">
+                    <div class="grass-content">
+                        <h3>🌱 Land Preparation</h3>
+                        <div class="badge">STEP 1</div>
+                        <ul class="feature-list">
+                            <li>Deep plow to 30cm during Kenya's dry season</li>
+                            <li>Harrow and level for fine tilth</li>
+                            <li>Test soil pH (ideal: 5.0-8.0 for Kenyan soils)</li>
+                            <li>Add agricultural lime if pH below 5.0</li>
+                            <li>Apply 10 tons/acre farmyard manure</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grass-card animate-on-scroll">
+                    <img src="assets/images/cuttings.png" alt="Planting cuttings" class="grass-image">
+                    <div class="grass-content">
+                        <h3>🌿 Tumbukiza Planting Method</h3>
+                        <div class="badge">STEP 2</div>
+                        <ul class="feature-list">
+                            <li>Make furrows 1.2 meters apart</li>
+                            <li>Use healthy 3-4 month cuttings with 3 nodes</li>
+                            <li>Plant at 70cm spacing within rows</li>
+                            <li>Bury 2 nodes, leave 1 above ground</li>
+                            <li>Plant at start of Kenya's rainy season</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grass-card animate-on-scroll">
+                    <img src="assets/images/seed-distance-super-napier3.jpg" alt="Growing grass in Kenya" class="grass-image">
+                    <div class="grass-content">
+                        <h3>💧 Maintenance Schedule</h3>
+                        <div class="badge">ONGOING</div>
+                        <ul class="feature-list">
+                            <li>Weekly watering during dry season</li>
+                            <li>NPK 17:17:17 after each harvest (50kg/acre)</li>
+                            <li>Weed control for first 3 months</li>
+                            <li>Monitor for Napier stunt disease</li>
+                            <li>Mulch with dry grass during hot seasons</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: white; padding: 3rem; border-radius: 20px; margin-top: 3rem; box-shadow: var(--shadow);" class="animate-on-scroll">
+                <h3 style="color: var(--primary-green); text-align: center; margin-bottom: 2rem;">🗓️ Kenyan Seasonal Planting Calendar</h3>
+                <div class="grass-grid">
+                    <div style="text-align: center;">
+                        <h4 style="color: var(--orange);">🌧️ Long Rains (March-May)</h4>
+                        <p>Best time for new plantings. Optimal establishment period with consistent moisture.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="color: var(--orange);">☀️ Dry Season (June-October)</h4>
+                        <p>Focus on maintenance, harvesting, and preparing for next planting season.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="color: var(--orange);">🌦️ Short Rains (November-December)</h4>
+                        <p>Secondary planting window. Good for expansion of existing plots.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Affordable Packages for Kenyan Farmers</h2>
+            <p class="section-subtitle animate-on-scroll">Flexible pricing designed for small-scale and commercial farmers across Kenya</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card animate-on-scroll">
+                    <h3>Small Scale Package</h3>
+                    <div style="color: var(--text-light); margin-bottom: 1rem;">1/8 Acre</div>
+                    <div class="price">
+                        <span class="price-currency">KSh</span> 8,500
+                    </div>
+                    <p><strong>850 Premium Cuttings</strong></p>
+                    <ul class="feature-list" style="margin: 1.5rem 0; text-align: left;">
+                        <li>Super Napier Pakchong 1 cuttings</li>
+                        <li>Comprehensive planting guide</li>
+                        <li>Free phone consultation</li>
+                        <li>WhatsApp support group access</li>
+                    </ul>
+                    <a href="https://wa.me/254701750294?text=Jambo! I want to order the Small Scale Package (1/8 Acre) with 850 Super Napier Pakchong 1 cuttings for KSh 8,500." class="btn-primary" style="width: 100%; text-align: center; display: block; margin-top: 1rem;">Order Now</a>
+                </div>
+                
+                <div class="pricing-card animate-on-scroll" style="border: 3px solid var(--orange); position: relative;">
+                    <div class="popular-badge">🏆 MOST POPULAR</div>
+                    <h3>Medium Scale Package</h3>
+                    <div style="color: var(--text-light); margin-bottom: 1rem;">1/4 Acre</div>
+                    <div class="price">
+                        <span class="price-currency">KSh</span> 17,500
+                    </div>
+                    <p><strong>1,750 Premium Cuttings</strong></p>
+                    <ul class="feature-list" style="margin: 1.5rem 0; text-align: left;">
+                        <li>Super Napier Pakchong 1 cuttings</li>
+                        <li>FREE delivery within 50km radius</li>
+                        <li>Detailed cultivation manual</li>
+                        <li>3 months phone support</li>
+                        <li>Fertilizer recommendation guide</li>
+                    </ul>
+                    <a href="https://wa.me/254701750294?text=Jambo! I want to order the Medium Scale Package (1/4 Acre) with 1,750 Super Napier Pakchong 1 cuttings for KSh 17,500." class="btn-primary" style="width: 100%; text-align: center; display: block; margin-top: 1rem;">Order Now</a>
+                </div>
+                
+                <div class="pricing-card animate-on-scroll">
+                    <h3>Large Scale Package</h3>
+                    <div style="color: var(--text-light); margin-bottom: 1rem;">1/2 Acre</div>
+                    <div class="price">
+                        <span class="price-currency">KSh</span> 35,000
+                    </div>
+                    <p><strong>3,500 Premium Cuttings</strong></p>
+                    <ul class="feature-list" style="margin: 1.5rem 0; text-align: left;">
+                        <li>Super Napier Pakchong 1 cuttings</li>
+                        <li>FREE delivery within 100km</li>
+                        <li>On-site planting guidance</li>
+                        <li>6 months comprehensive support</li>
+                        <li>Nutritionist consultation</li>
+                    </ul>
+                    <a href="https://wa.me/254701750294?text=Jambo! I want to order the Large Scale Package (1/2 Acre) with 3,500 Super Napier Pakchong 1 cuttings for KSh 35,000." class="btn-primary" style="width: 100%; text-align: center; display: block; margin-top: 1rem;">Order Now</a>
+                </div>
+                
+                <div class="pricing-card animate-on-scroll">
+                    <h3>Commercial Package</h3>
+                    <div style="color: var(--text-light); margin-bottom: 1rem;">1 Full Acre</div>
+                    <div class="price">
+                        <span class="price-currency">KSh</span> 70,000
+                    </div>
+                    <p><strong>7,000 Premium Cuttings</strong></p>
+                    <ul class="feature-list" style="margin: 1.5rem 0; text-align: left;">
+                        <li>Super Napier Pakchong 1 cuttings</li>
+                        <li>FREE nationwide delivery</li>
+                        <li>Professional planting service</li>
+                        <li>12 months full support</li>
+                        <li>Livestock nutrition consultation</li>
+                        <li>Silage making training</li>
+                    </ul>
+                    <a href="https://wa.me/254701750294?text=Jambo! I want to order the Commercial Package (1 Full Acre) with 7,000 Super Napier Pakchong 1 cuttings for KSh 70,000." class="btn-primary" style="width: 100%; text-align: center; display: block; margin-top: 1rem;">Order Now</a>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); padding: 3rem; border-radius: 20px; margin-top: 3rem; text-align: center;" class="animate-on-scroll">
+                <h3 style="color: var(--orange); margin-bottom: 1rem;">🎯 Special Enterprise Package</h3>
+                <div class="kenya-flag-gradient" style="width: 200px; margin: 1rem auto;"></div>
+                <h4>Planning 4000+ Hectares? We've Got You Covered!</h4>
+                <p style="margin: 1rem 0; font-size: 1.1rem;">Wholesale pricing for large-scale commercial projects across Kenya</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary-green);">KSh 10</div>
+                        <div>Per cutting (bulk orders)</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary-green);">Bulk</div>
+                        <div>Discounts available</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--primary-green);">24/7</div>
+                        <div>Project support team</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-primary">Get Enterprise Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" style="background: var(--surface); padding: 6rem 0;">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">📸 Our Forage Gallery</h2>
+            <div class="kenya-accent"></div>
+            <p class="section-subtitle animate-on-scroll">Real photos from our farms and satisfied customers across Kenya</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/cuttings.png" alt="Fresh Cuttings Ready for Planting" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">✂️ Fresh Cuttings</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Premium quality cuttings ready for planting</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/plantinng super napier.jpg" alt="Planting Super Napier" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">🌱 Planting Process</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Super Napier planting demonstration in field</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/seed-distance-super-napier3.jpg" alt="Proper Spacing Guide" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">📏 Spacing Guide</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Proper seed distance and spacing for optimal growth</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/pakchong1.jpeg" alt="Pakchong Variety" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">🏆 Pakchong Excellence</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Premium Pakchong 1 variety with superior protein content</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/pakchong11.jpeg" alt="Field Cultivation" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">🚜 Field Preparation</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Proper field cultivation for optimal grass growth</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/purple naper.jpg" alt="Purple Napier Variety" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">🟣 Purple Napier</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Purple napier grass variety</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/WhatsApp Image 2025-07-22 at 20.09.06 (2).jpeg" alt="Grass Establishment" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">🌿 Early Growth</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Young grass plants establishing strong root systems</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/WhatsApp Image 2025-07-22 at 20.09.09 (1).jpeg" alt="Harvest Ready" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">✂️ Harvest Time</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Grass ready for cutting - optimal nutritional content</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/Harvesting-Super-Napier-e1691517673855-1075x550.webp" alt="Harvesting Super Napier" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">🌾 Harvesting Process</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Super Napier harvesting in action</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card animate-on-scroll">
+                    <img src="assets/images/silage-new.webp" alt="Silage Making" class="gallery-image">
+                    <div style="padding: 1rem; background: white;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">🥛 Silage Production</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">High-quality silage from Super Napier</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Gallery CTA -->
+            <div style="text-align: center; margin-top: 4rem;" class="animate-on-scroll">
+                <div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--shadow);">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">📱 Share Your Success Story!</h3>
+                    <p style="margin-bottom: 2rem;">Got amazing results with our grass? Send us photos and join our gallery!</p>
+                    <a href="https://wa.me/254701750294?text=I have success photos to share from my forage grass farm!" class="whatsapp-btn">
+                        📸 Share Your Photos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Ready to Transform Your Farm?</h2>
+            <p class="section-subtitle animate-on-scroll">Join thousands of successful Kenyan farmers. Contact us today!</p>
+            
+            <div class="contact-card animate-on-scroll">
+                <h3 style="color: var(--primary-green); margin-bottom: 2rem;">Get Your Premium Cuttings Today</h3>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>Mobile & WhatsApp</strong>
+                            <div>0701750294 | 0702667328</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Service Areas</strong>
+                            <div>All Counties in Kenya</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">🚚</div>
+                        <div>
+                            <strong>Delivery</strong>
+                            <div>Nationwide Coverage</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">🌐</div>
+                        <div>
+                            <strong>Follow Us</strong>
+                            <div><a href="https://www.facebook.com/brachariagrasskenya/" target="_blank" style="color: #1877F2; text-decoration: none;">Brachiaria Grass Kenya Ltd</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Special Large Farm Pricing -->
+                <div style="background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                    <h4 style="color: var(--primary-green); text-align: center; margin-bottom: 1.5rem;">🌾 Large Scale Farm Pricing (More Than 1 Acre)</h4>
+                    <div style="text-align: center;">
+                        <p style="font-size: 1.2rem; margin-bottom: 1rem;">Contact us for special bulk pricing on large farm projects</p>
+                        <p style="color: var(--text-light);">Volume discounts available for farms over 2 acres</p>
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem; font-weight: 500;">✅ Includes: FREE nationwide delivery, professional planting guidance, 12-month support, silage training</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <a href="https://wa.me/254701750294?text=Jambo! I'm interested in Super Napier Pakchong 1 cuttings for my farm in Kenya. Please send me more information and pricing." class="whatsapp-btn">
+                        💬 WhatsApp: 0701750294
+                    </a>
+                    <a href="https://wa.me/254702667328?text=Jambo! I need forage grass cuttings for my Kenyan farm. Please share pricing and availability." class="whatsapp-btn">
+                        💬 or WhatsApp: 0702667328
+                    </a>
+                    <a href="tel:+254701750294" class="whatsapp-btn call-btn">
+                        📞 Call: 0701750294
+                    </a>
+                    <a href="tel:+254702667328" class="whatsapp-btn call-btn">
+                        📞 or Call: 0702667328
+                    </a>
+                </div>
+                
+                <div style="background: var(--light-green); padding: 2rem; border-radius: 15px; margin-top: 2rem;">
+                    <h4 style="color: var(--dark); margin-bottom: 1rem;">🚀 Why Choose Us?</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
+                        <div>
+                            <div style="font-weight: 700; color: var(--primary-green);">98%</div>
+                            <div style="font-size: 0.9rem;">Success Rate</div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 700; color: var(--primary-green);">5000+</div>
+                            <div style="font-size: 0.9rem;">Happy Farmers</div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 700; color: var(--primary-green);">47</div>
+                            <div style="font-size: 0.9rem;">Counties Served</div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 700; color: var(--primary-green);">24/7</div>
+                            <div style="font-size: 0.9rem;">Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4 style="color: var(--accent-green); margin-bottom: 1rem;">Premium Forage Kenya</h4>
+                    <p>Transforming Kenyan livestock farming through scientifically proven, high-quality forage grasses.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent-green); margin-bottom: 1rem;">Our Services</h4>
+                    <ul style="list-style: none;">
+                        <li>Premium Grass Cuttings</li>
+                        <li>Nationwide Delivery</li>
+                        <li>Farming Consultations</li>
+                        <li>Technical Support</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent-green); margin-bottom: 1rem;">Follow Us</h4>
+                    <p>📘 <a href="https://www.facebook.com/brachariagrasskenya/" target="_blank" style="color: #1877F2; text-decoration: none;">Facebook: Brachiaria Grass Kenya</a></p>
+                    <p>📍 Serving all 47 counties in Kenya</p>
+                    <p>🚚 Nationwide delivery available</p>
+                </div>
+            </div>
+            <div class="kenya-flag-gradient"></div>
+            <p style="margin-top: 2rem;">&copy; 2025 Premium Forage Solutions Kenya. Empowering Kenyan Farmers • Sustainable • Profitable • Reliable</p>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">🌾 From Kenyan Farmers, For Kenyan Farmers 🇰🇪</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Dynamic header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrolled = window.scrollY > 100;
+            
+            if (scrolled) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 40px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 40px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add smooth hover effects to cards
+        document.querySelectorAll('.grass-card, .pricing-card, .testimonial-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Preload images for better performance
+        const imagesToPreload = [
+            'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+        ];
+
+        imagesToPreload.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Add loading states for better UX
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        // Mobile menu toggle (for responsive design)
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.innerHTML = '☰';
+        mobileMenuBtn.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            cursor: pointer;
+        `;
+
+        // Add mobile menu functionality
+        if (window.innerWidth <= 768) {
+            const nav = document.querySelector('nav');
+            nav.appendChild(mobileMenuBtn);
+            
+            const navLinks = document.querySelector('.nav-links');
+            mobileMenuBtn.style.display = 'block';
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+
+        // Animate statistics counters
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.ceil(current);
+                }
+            }, 20);
+        }
+
+        // Trigger counter animations when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const target = parseInt(stat.textContent);
+                        if (!isNaN(target)) {
+                            animateCounter(stat, target);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
+            
